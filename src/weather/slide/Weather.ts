@@ -70,6 +70,10 @@ export default class SimpleMessageSlideModule extends SlideModule {
         const slide = reactive(props.slide) as IPublicSlide;
         this.context = reactive(props.slide.context);
 
+        const city = ref(slide.data.city);
+        const todaySummary = ref(slide.data.today_summary)
+        const forecast = ref(slide.data.forecast)
+
         this.context.onPrepare(async () => {
 
         });
@@ -93,21 +97,26 @@ export default class SimpleMessageSlideModule extends SlideModule {
                 class: "flex w-full h-full bg-gradient-to-br from-blue-500 to-sky-300 overflow-y-hidden"
             }, [
                 h("div", {
-                    class: "w-full h-full m-32"
+                    class: "w-full h-full flex flex-row portrait:flex-col items-center justify-around"
                 }, [
                     h("div", {
-                        class: "block-left flex flex-col h-3/5 justify-between w-2/3"
+                        class: "block-left h-full flex flex-col justify-around w-1/3 items-center"
                     }, [
-                        h(City, {}, () => {}),
-                        h(Summary, {}, () => {})
+                        h(City, {
+                            city: city.value
+                        }),
+                        h(Summary, {
+                            todaySummary: todaySummary.value
+                        })
                     ]),
                     h("div", {
-                        class: "block-right h-full w-1/3"
-                    }, [
-                        h(Forecast, [])
-                    ])
+                        class: "block-right h-full w-1/3 flex flex-col justify-evenly items-center"
+                    }, forecast.value.map((dayForecast) => {
+                        return h(Forecast, {
+                            forecast: dayForecast
+                        })
+                    }))
                 ])
-
             ])
     }
 }

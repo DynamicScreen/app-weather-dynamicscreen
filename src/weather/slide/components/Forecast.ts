@@ -1,21 +1,35 @@
-import {h, toRef, toRefs, defineComponent} from "vue";
+import {h, toRef, defineComponent} from "vue";
 
 export default defineComponent({
     props: {
-        day: {type: String, required: true}
+        forecast: { type: Object, default: () => ({ dayOfWeek: "Someday", temperature: "XX °C", summary: "clear", icon: "" })}
     },
     setup(props) {
 
-        const dayOfWeek = toRefs(props).day;
+        const forecast = toRef(props, "forecast");
 
         return () =>
             h("div", {
-                class: "flex bg-black opacity-50 m-10"
+                class: "flex p-10 bg-black bg-opacity-10 flex-col rounded-3xl text-white w-5/6"
             }, [
                 h("div", {
-                    class: "text-white text-xl"
-                }, ""),
-                h("div")
+                    class: "text-4xl font-bold mb-5"
+                }, forecast.value.dayOfWeek),
+                h("div" , {
+                    class: "flex flex-row items-center"
+                }, [
+                    h("i", {
+                        class: "text-7xl mr-5 " + forecast.value.icon
+                    }),
+                    h("div", {
+                        class: "flex flex-col text-4xl"
+                    }, [
+                        h("div", {
+                            class: "font-bold"
+                        }, forecast.value.temperature),
+                        h("div", forecast.value.summary)
+                    ])
+                ])
             ])
     }
 });
