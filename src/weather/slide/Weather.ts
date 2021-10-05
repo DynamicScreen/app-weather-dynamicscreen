@@ -31,7 +31,7 @@ export default class SimpleMessageSlideModule extends SlideModule {
     };
 
     onMounted() {
-        console.log('onMount')
+        console.log('onMounted')
     }
 
     //@ts-ignore
