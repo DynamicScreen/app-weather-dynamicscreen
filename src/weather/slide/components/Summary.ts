@@ -10,7 +10,7 @@ export default defineComponent({
 
         return () =>
             h("div", {
-                class: "flex flex-row text-white text-8xl"
+                class: "flex flex-row text-white items-center text-8xl"
             }, [
                 h("i", {
                     class: "text-9xl mr-10 " + todaySummary.value.icon
