@@ -100,7 +100,7 @@ export default class SimpleMessageSlideModule extends SlideModule {
                     class: "w-full h-full flex flex-row portrait:flex-col items-center justify-around"
                 }, [
                     h("div", {
-                        class: "block-left h-full flex flex-col justify-around w-1/3 portrait:w-full"
+                        class: "block-left h-full flex flex-col justify-around portrait:items-center w-1/3 portrait:w-full"
                     }, [
                         h(City, {
                             city: city.value
