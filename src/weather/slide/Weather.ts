@@ -100,7 +100,7 @@ export default class SimpleMessageSlideModule extends SlideModule {
                     class: "w-full h-full flex flex-row portrait:flex-col items-center justify-around"
                 }, [
                     h("div", {
-                        class: "block-left h-full flex flex-col justify-around w-1/3 items-center"
+                        class: "block-left h-full flex flex-col justify-around w-1/3 portrait:w-full"
                     }, [
                         h(City, {
                             city: city.value
@@ -110,7 +110,7 @@ export default class SimpleMessageSlideModule extends SlideModule {
                         })
                     ]),
                     h("div", {
-                        class: "block-right h-full w-1/3 flex flex-col justify-evenly items-center"
+                        class: "block-right h-full w-1/3 portrait:w-full flex flex-col justify-evenly items-center"
                     }, forecast.value.map((dayForecast) => {
                         return h(Forecast, {
                             forecast: dayForecast
