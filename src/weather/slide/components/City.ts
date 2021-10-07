@@ -13,10 +13,10 @@ export default defineComponent({
                 class: "flex flex-col"
             }, [
                 h("div", {
-                    class: "text-5xl text-white font-bold"
+                    class: "text-6xl text-white font-bold"
                 }, "weather."),
                 h("div", {
-                    class: "text-9xl text-white font-bold"
+                    class: "text-10xl text-white font-extrabold"
                 }, city.value)
             ])
     }

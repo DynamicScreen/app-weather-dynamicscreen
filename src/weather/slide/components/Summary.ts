@@ -19,7 +19,7 @@ export default defineComponent({
                     class: "flex flex-col"
                 }, [
                     h("div", {
-                        class: "font-bold"
+                        class: "font-extrabold"
                     }, todaySummary.value.temperature),
                     h("div", todaySummary.value.summary)
                 ]),

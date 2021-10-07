@@ -10,7 +10,7 @@ export default defineComponent({
 
         return () =>
             h("div", {
-                class: "flex p-10 bg-black bg-opacity-10 flex-col rounded-3xl text-white w-5/6 portrait:items-center portrait:w-2/3"
+                class: "flex p-16 bg-black bg-opacity-10 flex-col rounded-extraXl text-white w-5/6 portrait:items-center portrait:w-2/3"
             }, [
                 h("div", {
                     class: "text-4xl font-bold mb-5"
