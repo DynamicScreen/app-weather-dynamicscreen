@@ -17,7 +17,7 @@ import Forecast from "./components/Forecast";
 const en = require("../../../languages/en.json");
 const fr = require("../../../languages/fr.json");
 
-export default class SimpleMessageSlideModule extends SlideModule {
+export default class WeatherSlideModule extends SlideModule {
     constructor(context: ISlideContext) {
         super(context);
     }
