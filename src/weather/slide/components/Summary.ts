@@ -13,7 +13,7 @@ export default defineComponent({
                 class: "flex flex-row text-white items-center text-8xl"
             }, [
                 h("i", {
-                    class: "text-9xl mr-10 " + todaySummary.value.icon
+                    class: "text-10xl mr-10 " + todaySummary.value.icon
                 }),
                 h("div", {
                     class: "flex flex-col"
