@@ -96,7 +96,7 @@ export default class WeatherSlideModule extends SlideModule {
 
         return () =>
             h("div", {
-                class: "flex w-full h-full bg-gradient-to-br from-red-500 to-sky-300 overflow-y-hidden"
+                class: "flex w-full h-full bg-gradient-to-br from-blue-500 to-sky-300 overflow-y-hidden"
             }, [
                 h("div", {
                     class: "w-full h-full flex flex-row portrait:flex-col items-center justify-around"
