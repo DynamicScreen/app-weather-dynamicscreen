@@ -14,6 +14,8 @@ import City from "./components/City";
 import Summary from "./components/Summary";
 import Forecast from "./components/Forecast";
 
+import { h } from "vue"
+
 const en = require("../../../languages/en.json");
 const fr = require("../../../languages/fr.json");
 
@@ -65,7 +67,7 @@ export default class WeatherSlideModule extends SlideModule {
 
     // @ts-ignore
     setup(props, ctx) {
-        const { h, reactive, ref, Transition } = ctx;
+        const { reactive, ref, Transition } = ctx;
 
         const slide = reactive(props.slide) as IPublicSlide;
         this.context = reactive(props.slide.context);
