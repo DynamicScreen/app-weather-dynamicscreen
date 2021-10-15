@@ -1,10 +1,12 @@
+# YAML
 id: app-weather-dynamicscreen
 name: app.name
 description: app.description
-logo: app.logo
+logo: ./resources/img/Donatello.jpeg
 version: 0.2.0
 channel: stable
 api-level: 1
+color: blue
 author:
   name: DynamicScreen
   email: bonjour@dynamicscreen.com
@@ -17,8 +19,10 @@ privileges:
         type: microsoft
         why: privileges.needs_account.microsoft.why
 modules:
-  - name: Weather forecast
+  - name: modules.weather.name
+    logo: modules.weather.logo
     identifier: weather
+    color: #0DA5E9
     type: slide
     description: Display weather forecast
     vue:

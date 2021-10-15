@@ -17,8 +17,9 @@
   },
   "modules": {
     "weather": {
-      "name": "Weather",
-      "description": "Display a wonderful blue sky"
+      "name": "Weather forecast",
+      "description": "Display a wonderful blue sky",
+      "logo": "fas fa-adjust"
     }
   }
 }
