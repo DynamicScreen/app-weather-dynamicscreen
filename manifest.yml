@@ -2,33 +2,34 @@
 id: app-weather-dynamicscreen
 name: app.name
 description: app.description
-logo: ./resources/img/Donatello.jpeg
+logo: fas fa-sun-cloud
 version: 0.2.0
 channel: stable
 api-level: 1
 color: blue
 author:
-  name: DynamicScreen
-  email: bonjour@dynamicscreen.com
+    name: DynamicScreen
+    email: bonjour@dynamicscreen.com
 privileges:
-  needs_account:
-    -   identifier: google1
-        type: google
-        why: privileges.needs_account.google.why
-    -   identifier: microsoft1
-        type: microsoft
-        why: privileges.needs_account.microsoft.why
+    needs_account:
+        -   identifier: google1
+            type: google
+            why: privileges.needs_account.google.why
+        -   identifier: microsoft1
+            type: microsoft
+            why: privileges.needs_account.microsoft.why
 modules:
-  - name: modules.weather.name
-    logo: modules.weather.logo
-    identifier: weather
-    color: #0DA5E9
-    type: slide
-    description: Display weather forecast
-    vue:
-      component: src/weather/slide/Weather.ts
-      options: src/weather/WeatherOptions.vue
-    php:
-      handler: Vendor\DynamicScreenWeather\WeatherHandler
-    node:
-      handler: src/handler.js
+    - name: modules.weather.name
+      logo: fas fa-sun-cloud
+      identifier: weather
+      color: dodgerblue
+      type: slide
+      description: Display weather forecast
+      options:
+        vue:
+            component: src/weather/slide/Weather.ts
+            options: src/weather/WeatherOptions.vue
+        php:
+            handler: Vendor\DynamicScreenWeather\WeatherHandler
+        node:
+            handler: src/handler.js

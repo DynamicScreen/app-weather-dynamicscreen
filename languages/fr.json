@@ -2,6 +2,7 @@
   "app": {
     "name": "Météo",
     "description": "Affiche les meilleures prévisions météo",
+    "logo": "fas fa-sun-cloud",
     "author": {
       "name": "DynamicScreen",
       "email": "bonjour@dynamicscreen.com",
@@ -19,7 +20,7 @@
     "weather": {
       "name": "Prévision météo",
       "description": "Affiche un beau ciel bleu",
-      "logo": "fas fa-adjust"
+      "logo": "fas fa-sun-cloud"
     }
   }
 }

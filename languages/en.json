@@ -2,6 +2,7 @@
   "app": {
     "name": "Weather",
     "description": "Display weather forecast",
+    "logo": "fas fa-sun-cloud",
     "author": {
       "name": "DynamicScreen",
       "email": "bonjour@dynamicscreen.com",
@@ -19,7 +20,7 @@
     "weather": {
       "name": "Weather forecast",
       "description": "Display a wonderful blue sky",
-      "logo": "fas fa-adjust"
+      "logo": "fas fa-sun-cloud"
     }
   }
 }
