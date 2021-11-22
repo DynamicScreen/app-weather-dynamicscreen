@@ -2,7 +2,7 @@
 id: app-weather-dynamicscreen
 name: app.name
 description: app.description
-logo: fas fa-sun-cloud
+logo: fas fa-sun
 version: 0.2.0
 channel: stable
 api-level: 1
@@ -20,7 +20,7 @@ privileges:
             why: privileges.needs_account.microsoft.why
 modules:
     - name: modules.weather.name
-      logo: fas fa-sun-cloud
+      logo: fas fa-sun
       identifier: weather
       color: dodgerblue
       type: slide
