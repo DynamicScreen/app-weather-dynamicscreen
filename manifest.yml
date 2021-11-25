@@ -10,14 +10,6 @@ color: blue
 author:
     name: DynamicScreen
     email: bonjour@dynamicscreen.com
-privileges:
-    needs_account:
-        -   identifier: google1
-            type: google
-            why: privileges.needs_account.google.why
-        -   identifier: microsoft1
-            type: microsoft
-            why: privileges.needs_account.microsoft.why
 modules:
     - name: modules.weather.name
       logo: fas fa-sun
@@ -27,9 +19,9 @@ modules:
       description: Display weather forecast
       options:
         vue:
-            component: src/weather/slide/Weather.ts
-            options: src/weather/WeatherOptions.vue
+            component: src/Weather/Weather.ts
+            options: src/Weather/WeatherOptions.vue
         php:
-            handler: Vendor\DynamicScreenWeather\WeatherHandler
+            handler: \DynamicScreen\Weather\WeatherSlideHandler
         node:
             handler: src/handler.js

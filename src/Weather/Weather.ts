@@ -8,25 +8,19 @@ import {
     SlideModule
 } from "dynamicscreen-sdk-js";
 
-import {onMounted, VNode} from 'vue';
-import i18next from "i18next";
-import City from "./components/City";
-import Summary from "./components/Summary";
-import Forecast from "./components/Forecast";
+import City from "../Components/City";
+import Summary from "../Components/Summary";
+import Forecast from "../Components/Forecast";
 
 import { h } from "vue"
 
-const en = require("../../../languages/en.json");
-const fr = require("../../../languages/fr.json");
+const en = require("../../languages/en.json");
+const fr = require("../../languages/fr.json");
 
 export default class WeatherSlideModule extends SlideModule {
     constructor(context: ISlideContext) {
         super(context);
     }
-
-    trans(key: string) {
-        return i18next.t(key);
-    };
 
     async onReady() {
         return true;
@@ -50,20 +44,6 @@ export default class WeatherSlideModule extends SlideModule {
 
     onUpdated() {
     }
-
-    initI18n() {
-        i18next.init({
-            fallbackLng: 'en',
-            lng: 'fr',
-            resources: {
-                en: { translation: en },
-                fr: { translation: fr },
-            },
-            debug: true,
-        }, (err, t) => {
-            if (err) return console.log('something went wrong loading translations', err);
-        });
-    };
 
     // @ts-ignore
     setup(props, ctx) {
