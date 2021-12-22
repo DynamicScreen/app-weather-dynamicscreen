@@ -1,10 +1,7 @@
 import {
-    BaseContext,
-    AssetDownload,
-    IAssetsStorageAbility,
-    IGuardsManager,
     ISlideContext,
     IPublicSlide,
+    VueInstance,
     SlideModule
 } from "dynamicscreen-sdk-js";
 
@@ -12,67 +9,19 @@ import City from "../Components/City";
 import Summary from "../Components/Summary";
 import Forecast from "../Components/Forecast";
 
-import { h } from "vue"
-
-const en = require("../../languages/en.json");
-const fr = require("../../languages/fr.json");
-
 export default class WeatherSlideModule extends SlideModule {
-    constructor(context: ISlideContext) {
-        super(context);
-    }
-
     async onReady() {
         return true;
     };
 
-    onMounted() {
-        console.log('onMounted')
-    }
+  setup(props: Record<string, any>, vue: VueInstance, context: ISlideContext) {
+        const { h, reactive, ref } = vue;
 
-    //@ts-ignore
-    onErrorTracked(err: Error, instance: Component, info: string) {
-    }
-
-    //@ts-ignore
-    onRenderTriggered(e) {
-    }
-
-    //@ts-ignore
-    onRenderTracked(e) {
-    }
-
-    onUpdated() {
-    }
-
-    // @ts-ignore
-    setup(props, ctx) {
-        const { reactive, ref, Transition } = ctx;
-
-        const slide = reactive(props.slide) as IPublicSlide;
-        this.context = reactive(props.slide.context);
+        const slide = reactive(this.context.slide) as IPublicSlide;
 
         const city = ref(slide.data.city);
         const todaySummary = ref(slide.data.today_summary)
         const forecast = ref(slide.data.forecast)
-
-        this.context.onPrepare(async () => {
-
-        });
-
-        this.context.onReplay(async () => {
-        });
-
-        this.context.onPlay(async () => {
-
-        });
-
-        // this.context.onPause(async () => {
-        //   console.log('Message: onPause')
-        // });
-
-        this.context.onEnded(async () => {
-        });
 
         return () =>
             h("div", {

@@ -13,9 +13,4 @@ class WeatherSlideHandler extends SlideHandler
     {
         // TODO with authprovider
     }
-
-    public function needed_accounts()
-    {
-        return $this->module->getOption('privileges.needs_account', false);
-    }
 }
