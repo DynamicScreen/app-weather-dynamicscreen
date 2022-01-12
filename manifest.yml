@@ -20,7 +20,7 @@ modules:
       options:
         vue:
             component: src/Weather/Weather.ts
-            options: src/Weather/WeatherOptions.vue
+            options: src/Weather/WeatherOptions.ts
         php:
             handler: \DynamicScreen\Weather\WeatherSlideHandler
         node:

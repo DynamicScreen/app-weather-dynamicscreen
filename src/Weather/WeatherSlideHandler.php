@@ -12,5 +12,7 @@ class WeatherSlideHandler extends SlideHandler
     public function fetch(ISlide $slide): void
     {
         // TODO with authprovider
+
+        $this->addSlide([]);
     }
 }
